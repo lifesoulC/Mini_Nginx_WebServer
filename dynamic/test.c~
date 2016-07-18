@@ -1,0 +1,24 @@
+#include <stdlib.h>
+#include <stdio.h>
+
+int main(int argc, char **argv, char **env)
+{
+    char *buf, *p;
+    char *str = "100&100";
+    char astr[100];
+memcpy(astr,str,strlen(str));
+    char arg1[100], arg2[100];
+    int n1, n2 = 0;
+    buf = astr;
+    printf("%s\n",buf);
+		p = index(buf, '&');
+		p = '\0';
+		strcpy(arg1, buf);
+		strcpy(arg2, p+1);
+printf("%s,%s\n",arg1,arg2);
+		n1 = atoi(arg1);
+		n2 = atoi(arg2);
+    printf("%d,%d\n",n1,n2);
+}
+
+
